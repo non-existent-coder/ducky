@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<HTML lang="en-US">
+
+<head>
+  <title>Ducky</title>
+  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practise Project">
+    <meta name="author" content="Nandhika">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  
+  </head>   
+    <body>
+  
+  <div class="duck">
+  <div class="duck-head" id="head"></div>
+  <div class="duck-body" id="body"></div>
+  <div class="duck-wing" id="wing"></div>
+  <div class="duck-beak" id="beak"></div>
+  <div class="duck-eye" id="eye"></div>
+  <div class="duck-eyeshine" id="eyeshine"></div><!--twinkle in the eye-->
+  <div class="water" id="water"></div></div>
+  <h3 id="result" style ="color:white;"></h3>
+  <script>
+      document.getElementById('head').onclick = function(event){
+          event.stopPropagation();
+        swal("Headshot won 100 points!");
+        document.getElementById("result").innerHTML="HEADSHOT!!! Scored 100 points";
+      };
+      document.getElementById('wing').onclick = function(event){
+          event.stopPropagation();
+        swal("Flightless Bird!!! Wing Shot! won 70 points");
+        document.getElementById("result").innerHTML="Flightless Bird!!! Wing Shot! won 70 points";
+      };
+      document.getElementById('beak').onclick = function(event){
+          event.stopPropagation();
+        swal("Quackless Bird! Beak Shot! won 50 points");
+        document.getElementById("result").innerHTML="Quackless Bird! Beak Shot! won 50 points";
+      };
+      document.getElementById('body').onclick = function(event){
+          event.stopPropagation();
+        swal("Hole in the body! won 25 points");
+        document.getElementById("result").innerHTML="Hole in the body! won 25 points";
+      };
+      document.getElementById('eye').onclick = function(event){
+          event.stopPropagation();
+        swal("BULLSEYEEE!!! Blind Bird! won 200 points");
+        document.getElementById("result").innerHTML="BULLSEYEEE!!! Blind Bird won 200 points";
+      };
+      document.getElementById('eyeshine').onclick = function(event){
+          event.stopPropagation();
+        swal("YOU MADE THE IMPOSSIBLE SHOT!!! Twinkle in the eye! won 1000000 points");
+        document.getElementById("result").innerHTML="YOU MADE THE IMPOSSIBLE SHOT!!! Twinkle in the eye won 1000000 points";
+      };
+      document.getElementById('water').onclick = function(event){
+          event.stopPropagation();
+        swal("Oopsie missed and dropped into water 0 points :( ");
+        document.getElementById("result").innerHTML="Oopsie missed and dropped into water 0 points :( ";
+      };
+
+  </script>
+
+</body>
+</HTML>
